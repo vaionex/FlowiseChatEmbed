@@ -6,7 +6,6 @@ import { BotBubble } from './bubbles/BotBubble'
 import { LoadingBubble } from './bubbles/LoadingBubble'
 import { SourceBubble } from './bubbles/SourceBubble'
 import { BotMessageTheme, TextInputTheme, UserMessageTheme } from '@/features/bubble/types'
-import { Badge } from './Badge'
 import socketIOClient from 'socket.io-client'
 import { Popup } from '@/features/popup'
 
@@ -366,7 +365,6 @@ export const Bot = (props: BotProps & { class?: string }) => {
                         onSubmit={handleSubmit}
                     />
                 </div>
-                <Badge badgeBackgroundColor={props.badgeBackgroundColor} poweredByTextColor={props.poweredByTextColor} botContainer={botContainer} />
                 <BottomSpacer ref={bottomSpacer} />
             </div>
             {sourcePopupOpen() && <Popup isOpen={sourcePopupOpen()} value={sourcePopupSrc()} onClose={() => setSourcePopupOpen(false)}/>}
